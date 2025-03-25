@@ -32,3 +32,21 @@ resource "upcloud_network" "de-02" {
 resource "upcloud_router" "de-01-router" {
   name = "de-01"
 }
+
+resource "upcloud_network" "de-03" {
+  name   = "de-03"
+  zone   = "de-fra1"
+  router = upcloud_router.de-01-router.id
+
+  ip_network {
+    address            = "10.255.191.0/24"
+    dhcp               = true
+    dhcp_default_route = true
+    family             = "IPv4"
+    gateway            = "10.255.191.1"
+    dhcp_dns           = ["8.8.8.8"]
+  }
+}
+
+
+

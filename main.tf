@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "upcloud" {
-  username = "jzan"
-  password = "fajriz-fawbyv-xAqxi5"
+  username = "terraform_zit_it"
+  password = "F&k4j^9)5Qhm5RUFf7CkeFKWFPFkfICX"
 }
 
 
