@@ -14,6 +14,7 @@ resource "upcloud_kubernetes_node_group" "keycloak-node-de" {
     labels = {
         managedby = "terraform"
     }
+    ssh_keys = [  ]
   taint {
     effect = "NoExecute"
     key = "taintkey"
