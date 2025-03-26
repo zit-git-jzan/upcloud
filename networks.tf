@@ -41,7 +41,7 @@ resource "upcloud_network" "de-03" {
   ip_network {
     address            = "10.255.191.0/24"
     dhcp               = true
-    dhcp_default_route = true
+    dhcp_default_route = false
     family             = "IPv4"
     gateway            = "10.255.191.1"
     dhcp_dns           = ["8.8.8.8"]
