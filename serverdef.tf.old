@@ -15,9 +15,9 @@ resource "upcloud_server" "node-test-de2" {
   hostname = "node-test-de2"
   zone     = "de-fra1"
   plan     = "DEV-1xCPU-1GB-10GB"
- 
 
-  )
+
+
   template {
     storage = "Debian GNU/Linux 12 (Bookworm)"
     size    = 10
@@ -36,6 +36,6 @@ resource "upcloud_server" "node-test-de2" {
     user              = "sysadmin"
     create_password   = true
     password_delivery = "email"
-    # keys              = ["upcloud"]
+    #keys              = ["upcloud"]
   }
 }
