@@ -52,7 +52,7 @@ resource "upcloud_server" "windows-2cpu-8gb-de-fra1" {
   network_interface {
     ip_address_family = "IPv4"
     type              = "private"
-    network           = upcloud_network.de-01_2.id
+    network           = upcloud_network.de-01.id
   }
 
   storage_devices {
@@ -77,7 +77,7 @@ resource "upcloud_server" "windows-2cpu-16gb-de-fra1" {
   network_interface {
     ip_address_family = "IPv4"
     type              = "private"
-    network           = upcloud_network.de-01_2.id
+    network           = upcloud_network.de-01.id
   }
 
   storage_devices {
@@ -138,7 +138,7 @@ resource "upcloud_server" "debian-1cpu-2gb-de-fra1" {
   network_interface {
     ip_address_family = "IPv4"
     type              = "private"
-    network           = upcloud_network.de-01_2.id
+    network           = upcloud_network.de-01.id
   }
 
   storage_devices {
@@ -168,7 +168,7 @@ resource "upcloud_server" "fw-mgmt" {
   network_interface {
     ip_address_family = "IPv4"
     type              = "private"
-    network           = upcloud_network.de-01_2.id
+    network           = upcloud_network.de-01.id
   }
 
   storage_devices {
