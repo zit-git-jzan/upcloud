@@ -1,3 +1,0 @@
-resource "upcloud_network" "my_imported_network" {
-  # Nach dem Import werden die fehlenden Attribute hier hinzugefügt.
-}

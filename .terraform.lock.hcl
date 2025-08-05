@@ -3,7 +3,7 @@
 
 provider "registry.terraform.io/upcloudltd/upcloud" {
   version     = "5.23.2"
-  constraints = "~> 5.21"
+  constraints = "~> 5.23"
   hashes = [
     "h1:ZIBvD2UNvBwkv62/DdZdS3IAkEP7PemLgAseva96n6M=",
     "zh:1745507bd1cd5d4beda8cd3f7f9fc85a13dd5252d178c89b96c98295c591572c",
