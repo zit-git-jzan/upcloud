@@ -41,7 +41,7 @@ resource "upcloud_server" "windows-2cpu-8gb-de-fra1" {
   labels = {
     Environment = "Prod"
     Project     = "IaaS"
-    System      = "Linux"
+    System      = "Windows"
     Owner       = "JZAN"
   }
 }
@@ -64,6 +64,12 @@ resource "upcloud_server" "windows-2cpu-16gb-de-fra1" {
     address = "virtio"
     storage = upcloud_storage.windows-2cpu-16gb-de-fra1_Device_1.id
     type    = "disk"
+  }
+  labels = {
+    Environment = "Prod"
+    Project     = "IaaS"
+    System      = "Windows"
+    Owner       = "JZAN"
   }
 }
 
@@ -90,5 +96,12 @@ resource "upcloud_server" "uag-debian-docker" {
     address = "virtio"
     storage = upcloud_storage.uag-debian-docker_Device_1.id
     type    = "disk"
+  }
+
+  labels = {
+    Environment = "Prod"
+    Project     = "IaaS"
+    System      = "Linux"
+    Owner       = "JZAN"
   }
 }
