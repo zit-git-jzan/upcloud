@@ -11,6 +11,12 @@ resource "upcloud_network" "de-02" {
     family             = "IPv4"
     gateway            = "10.255.190.1"
   }
+  labels = {
+    Environment = "Prod"
+    Project     = "IaaS"
+    System      = "VPC"
+    Owner       = "JZAN"
+  }
 }
 
 resource "upcloud_network" "de-03" {
@@ -25,6 +31,12 @@ resource "upcloud_network" "de-03" {
     dhcp_dns           = ["10.255.192.4", "8.8.8.8"]
     family             = "IPv4"
     gateway            = "10.255.191.1"
+  }
+  labels = {
+    Environment = "Prod"
+    Project     = "IaaS"
+    System      = "VPC"
+    Owner       = "JZAN"
   }
 }
 
@@ -41,8 +53,20 @@ resource "upcloud_network" "de-01" {
     family             = "IPv4"
     gateway            = "10.255.192.1"
   }
+  labels = {
+    Environment = "Prod"
+    Project     = "IaaS"
+    System      = "VPC"
+    Owner       = "JZAN"
+  }
 }
 
 resource "upcloud_router" "de-01" {
   name = "de-01"
+  labels = {
+    Environment = "Prod"
+    Project     = "IaaS"
+    System      = "Router"
+    Owner       = "JZAN"
+  }
 }
