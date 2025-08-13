@@ -54,7 +54,7 @@ resource "upcloud_network" "de-01" {
     gateway            = "10.255.192.1"
   }
   labels = {
-    Environment = "Prod"
+    Environment = "Server"
     Project     = "IaaS"
     System      = "VPC"
     Owner       = "JZAN"
