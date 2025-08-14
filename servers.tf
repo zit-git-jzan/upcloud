@@ -111,9 +111,9 @@ resource "upcloud_server" "uag-debian-docker" {
 # storage
 
 resource "upcloud_storage" "uag-debian-docker2" {
-  size  = 60
+  size  = 50
   tier  = "standard"
-  title = "uag-debian-docker2 Device 1"
+  title = "uag-debian-docker2dev1"
   zone  = "de-fra1"
 }
 
