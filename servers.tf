@@ -106,7 +106,7 @@ resource "upcloud_server" "uag-debian-docker" {
   }
 }
 
-# new server with only one interanl interface 
+/* # new server with only one interanl interface 
 
 # storage
 
@@ -144,4 +144,4 @@ resource "upcloud_server" "uag-debian-docker2" {
     System      = "Linux"
     Owner       = "JZAN"
   }
-} 
+}  */
