@@ -106,19 +106,9 @@ resource "upcloud_server" "uag-debian-docker" {
   }
 }
 
-/* # new server with only one interanl interface 
+# new server with only one interanl interface 
 
-# storage
-
-resource "upcloud_storage" "uag-debian-docker2" {
-  size  = 50
-  tier  = "standard"
-  title = "uag-debian-docker2dev1"
-  zone  = "de-fra1"
-}
-
-
-resource "upcloud_server" "uag-debian-docker2" {
+/* resource "upcloud_server" "uag-debian-docker2" {
   firewall = false
   hostname = "uag-debian-docker2"
   metadata = true
@@ -132,10 +122,9 @@ resource "upcloud_server" "uag-debian-docker2" {
     network           = upcloud_network.de-01.id
   }
 
-  storage_devices {
-    address = "virtio"
-    storage = upcloud_storage.uag-debian-docker2.id
-    type    = "disk"
+  template {
+    storage = "Debian GNU/Linux 13 (Trixie)"
+    size    = 40
   }
 
   labels = {
@@ -143,5 +132,10 @@ resource "upcloud_server" "uag-debian-docker2" {
     Project     = "IaaS"
     System      = "Linux"
     Owner       = "JZAN"
+  }
+
+  login {
+    create_password = false
+    keys            = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIn37dO/2MG3ITtzYhMTVDsdNrQAa4rmGgtcR2XTnPWZ zandanelj@zandanelj-Device-iMac-with-OS-AppleOsX-1532.local"]
   }
 }  */
