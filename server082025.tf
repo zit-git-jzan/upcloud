@@ -1,10 +1,10 @@
 # new server with only one interanl interface 
 
-resource "upcloud_server" "windows-pki-ca1" {
+resource "upcloud_server" "DEFRAAPP02" {
+  hostname = "defraapp02.zandanel.intern"
   firewall = false
-  hostname = "windows-pki-ca1"
   metadata = true
-  title    = "windows-pki-ca1"
+  title    = "defraapp02"
   zone     = "de-fra1"
   plan     = "DEV-2xCPU-16GB"
 
@@ -26,12 +26,19 @@ resource "upcloud_server" "windows-pki-ca1" {
     Owner       = "JZAN"
   }
 
-  user_data = <<-EOT
+  login {
+    #user              = "administrator"
+    create_password   = true
+    password_delivery = "email"
+  }
+
+  /* user_data = <<-EOT
     #cloud-config
     chpasswd:
       list: |
         administrator:Vpn123!
+        cloudadmin:Vpn123!!Vpn123!!
       expire: False
-  EOT
+  EOT */
 
 } 
