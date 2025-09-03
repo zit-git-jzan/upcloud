@@ -16,7 +16,7 @@ resource "upcloud_server" "DEFRAAPP02" {
   }
 
   template {
-    storage = "Windows Server 2022 Standard"
+    storage = "Windows Server 2025 Standard"
     size    = 80
   }
 
