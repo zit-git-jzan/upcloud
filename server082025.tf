@@ -54,20 +54,4 @@ resource "upcloud_server" "DEFRADC02" {
     System      = "Windows"
     Owner       = "JZAN"
   }
-
-  /*   login {
-    #user              = "administrator"
-    create_password   = true
-    password_delivery = "email"
-  } */
-
-  /* user_data = <<-EOT
-    #cloud-config
-    chpasswd:
-      list: |
-        administrator:Vpn123!
-        cloudadmin:Vpn123!!Vpn123!!
-      expire: False
-  EOT */
-
 } 
