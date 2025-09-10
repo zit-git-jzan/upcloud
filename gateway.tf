@@ -26,6 +26,18 @@ resource "upcloud_gateway_connection" "toVelo" {
     static_network = "10.255.192.0/22"
   }
 
+  local_route {
+    name           = "de-02"
+    type           = "static"
+    static_network = "10.255.190.0/24"
+  }
+
+  local_route {
+    name           = "de-03"
+    type           = "static"
+    static_network = "10.255.191.0/24"
+  }
+
   remote_route {
     name           = "to-dc"
     type           = "static"
