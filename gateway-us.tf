@@ -1,29 +1,31 @@
-resource "upcloud_gateway" "vpn-de-fra" {
-  name = "vpn-de-fra"
-  zone = "de-fra1"
+resource "upcloud_gateway" "vpn-us-ny" {
+  name = "vpn-us-ny"
+  zone = "us-nyc1"
   plan = "essentials"
 
   features = ["nat", "vpn"]
 
   router {
-    id = upcloud_router.de-01.id
+    id = upcloud_router.us-01.id
   }
   labels = {
-    Environment = "Prod"
+    Environment = "Test"
     Project     = "IaaS"
     System      = "Network"
     Owner       = "JZAN"
   }
 }
-resource "upcloud_gateway_connection" "toVelo" {
-  gateway = upcloud_gateway.vpn-de-fra.id
-  name    = "toVelo"
+
+
+resource "upcloud_gateway_connection" "toVeloUS" {
+  gateway = upcloud_gateway.vpn-us-ny.id
+  name    = "toVeloUS"
   type    = "ipsec"
 
   local_route {
-    name           = "de-01"
+    name           = "us-01"
     type           = "static"
-    static_network = "10.255.192.0/22"
+    static_network = "10.255.197.0/24"
   }
 
   /* local_route {
@@ -66,13 +68,13 @@ resource "upcloud_gateway_connection" "toVelo" {
   }
 }
 
-resource "upcloud_gateway_connection_tunnel" "to-Velo" {
-  connection_id = upcloud_gateway_connection.toVelo.id
+resource "upcloud_gateway_connection_tunnel" "to-Velo-US" {
+  connection_id = upcloud_gateway_connection.toVeloUS.id
   name          = "to-Velo"
   #local_address_name = tolist(upcloud_gateway.this.address).0.name
-  local_address_name = tolist(upcloud_gateway.vpn-de-fra.address).0.name
-  remote_address     = "212.186.127.82"
-  #remote_address = "152.65.233.127"
+  local_address_name = tolist(upcloud_gateway.vpn-us-ny.address).0.name
+  remote_address     = "136.144.99.57"
+  #remote_address = "136.144.99.57"
   ipsec_auth_psk {
     psk = "you_probably_want_to_use_env_vars_here"
   }
