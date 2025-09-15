@@ -25,7 +25,7 @@ resource "upcloud_gateway_connection" "toVeloUS" {
   local_route {
     name           = "us-01"
     type           = "static"
-    static_network = "10.255.197.0/24"
+    static_network = "10.254.197.0/24"
   }
 
   /* local_route {
