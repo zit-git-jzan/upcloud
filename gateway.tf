@@ -64,6 +64,11 @@ resource "upcloud_gateway_connection" "toVelo" {
     type           = "static"
     static_network = "10.255.224.0/24"
   }
+  remote_route {
+    name           = "to-sase"
+    type           = "static"
+    static_network = "172.31.0.0/22"
+  }
 }
 
 resource "upcloud_gateway_connection_tunnel" "to-Velo" {
