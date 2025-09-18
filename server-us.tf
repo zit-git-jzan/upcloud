@@ -23,6 +23,7 @@ resource "upcloud_server" "test-us-1" {
     System      = "Linux"
     Owner       = "JZAN"
   }
+  
 
   login {
     create_password = false
