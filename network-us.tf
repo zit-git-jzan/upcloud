@@ -10,6 +10,7 @@ resource "upcloud_network" "us-01" {
     dhcp_dns           = ["10.255.192.4", "8.8.8.8"]
     family             = "IPv4"
     gateway            = "10.254.197.1"
+
   }
   labels = {
     Environment = "TEST"

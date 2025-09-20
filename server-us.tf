@@ -1,4 +1,4 @@
-resource "upcloud_server" "test-us-1" {
+/* resource "upcloud_server" "test-us-1" {
   firewall = false
   hostname = "test-us-1"
   metadata = true
@@ -15,6 +15,11 @@ resource "upcloud_server" "test-us-1" {
   template {
     storage = "Debian GNU/Linux 13 (Trixie)"
     size    = 40
+    backup_rule {
+      interval  = "daily"
+      time      = "0100"
+      retention = 8
+    }
   }
 
   labels = {
@@ -23,10 +28,10 @@ resource "upcloud_server" "test-us-1" {
     System      = "Linux"
     Owner       = "JZAN"
   }
-  
+
 
   login {
     create_password = false
     keys            = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIn37dO/2MG3ITtzYhMTVDsdNrQAa4rmGgtcR2XTnPWZ zandanelj@zandanelj-Device-iMac-with-OS-AppleOsX-1532.local"]
   }
-} 
+}  */
