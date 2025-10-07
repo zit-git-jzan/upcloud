@@ -1,4 +1,4 @@
-resource "upcloud_server" "test-us-1" {
+/* resource "upcloud_server" "test-us-1" {
   firewall = false
   hostname = "test-us-1"
   metadata = true
@@ -34,4 +34,4 @@ resource "upcloud_server" "test-us-1" {
     create_password = false
     keys            = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIn37dO/2MG3ITtzYhMTVDsdNrQAa4rmGgtcR2XTnPWZ zandanelj@zandanelj-Device-iMac-with-OS-AppleOsX-1532.local"]
   }
-} 
+}  */
