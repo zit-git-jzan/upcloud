@@ -1,4 +1,4 @@
-resource "upcloud_server" "DEFRAtest01" {
+/* resource "upcloud_server" "DEFRAtest01" {
   hostname = "defratest01.zandanel.intern"
   firewall = false
   metadata = true
@@ -8,9 +8,9 @@ resource "upcloud_server" "DEFRAtest01" {
 
   network_interface {
     ip_address_family = "IPv4"
-    #ip_address        = "10.255.192.6"
-    type    = "private"
-    network = upcloud_network.de-01.id
+    ip_address        = "10.255.192.6"
+    type              = "private"
+    network           = upcloud_network.de-01.id
   }
 
   template {
@@ -24,4 +24,4 @@ resource "upcloud_server" "DEFRAtest01" {
     System      = "Windows"
     Owner       = "JZAN"
   }
-}
+} */
