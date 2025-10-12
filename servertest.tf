@@ -1,4 +1,4 @@
-/* resource "upcloud_server" "DEFRAtest01" {
+resource "upcloud_server" "DEFRAtest01" {
   hostname = "defratest01.zandanel.intern"
   firewall = false
   metadata = true
@@ -24,4 +24,4 @@
     System      = "Windows"
     Owner       = "JZAN"
   }
-} */
+}
