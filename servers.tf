@@ -12,13 +12,6 @@ resource "upcloud_storage" "windows-2cpu-16gb-de-fra1_Device_1" {
   zone  = "de-fra1"
 }
 
-resource "upcloud_storage" "uag-debian-docker_Device_1" {
-  size  = 60
-  tier  = "standard"
-  title = "uag-debian-docker Device 1"
-  zone  = "de-fra1"
-}
-
 resource "upcloud_server" "windows-2cpu-8gb-de-fra1" {
   firewall = false
   hostname = "windows-2cpu-8gb-de-fra1"
