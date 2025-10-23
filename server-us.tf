@@ -27,6 +27,11 @@ resource "upcloud_server" "test-us-1" {
     }
   }
 
+  /* simple_backup {
+    plan = "dailies"
+    time = "0300"
+  } */
+
   labels = {
     Environment = "Test"
     Project     = "IaaS"

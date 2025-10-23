@@ -31,6 +31,12 @@ resource "upcloud_server" "windows-2cpu-8gb-de-fra1" {
     storage = upcloud_storage.windows-2cpu-8gb-de-fra1_Device_1.id
     type    = "disk"
   }
+
+  simple_backup {
+    plan = "dailies"
+    time = "0100"
+  }
+
   labels = {
     Environment = "Prod"
     Project     = "IaaS"

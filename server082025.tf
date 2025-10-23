@@ -48,6 +48,11 @@ resource "upcloud_server" "DEFRADC02" {
     size    = 80
   }
 
+  simple_backup {
+    plan = "dailies"
+    time = "0300"
+  }
+
   labels = {
     Environment = "Prod"
     Project     = "IaaS"
