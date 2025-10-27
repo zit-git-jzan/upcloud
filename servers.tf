@@ -34,7 +34,7 @@ resource "upcloud_server" "windows-2cpu-8gb-de-fra1" {
 
   simple_backup {
     plan = "dailies"
-    time = "0100"
+    time = "0300"
   }
 
   labels = {
@@ -65,10 +65,10 @@ resource "upcloud_server" "windows-2cpu-16gb-de-fra1" {
     type    = "disk"
   }
 
-  /* simple_backup {
+  simple_backup {
     plan = "dailies"
-    time = "0100"
-  } */
+    time = "0300"
+  }
 
   labels = {
     Environment = "Prod"
